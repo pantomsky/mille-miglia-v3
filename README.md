@@ -33,7 +33,7 @@ No test yet.
 
 ## Authors
 
-* **Tomasz Witkowski** - *Initial work* - [PurpleBooth](https://github.com/pantomsky)
+* **Tomasz Witkowski** - *Initial work* - [pantomsky](https://github.com/pantomsky)
 
 ## License
 
