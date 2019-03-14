@@ -1,0 +1,32 @@
+<h1 class="my-4">Lista tras</h1>
+
+<p><%= link_to "Dodaj nową trasę", new_track_path, class: "btn btn-success" %></p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Początek</th>
+      <th>Koniec</th>
+      <th>Odległość</th>
+      <th>Kierowca</th>
+      <th>Samochód</th>
+      <th>Opis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tracks.each do |track| %>
+    <tr>
+      <td><%= track.id %></td>
+      <td><%= track.start %></td>
+      <td><%= track.destination %></td>
+      <td><%= track.distance %></td>
+      <td><%= track.driver %></td>
+      <td><%= track.car %></td>
+      <td><%= track.description %></td>
+      <td>
+        <%= link_to 'Pokaż', track_path(track) %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>

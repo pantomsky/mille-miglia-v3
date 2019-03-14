@@ -1,0 +1,12 @@
+<h1 class="my-4">Podgląd trasy</h1>
+
+<h5>Nr id:</h5><p><strong><%= @track.id %></strong></p>
+<h5>Początek trasy:</h5><p><strong><%= @track.start %></strong></p>
+<h5>Koniec trasy:</h5><p><strong><%= @track.destination %></strong></p>
+<h5>Długość:</h5><p><strong><%= @track.distance %></strong></p>
+<h5>Kierowca:</h5><p><strong><%= @track.driver %></strong></p>
+<h5>Samochód:</h5><p><strong><%= @track.car %></strong></p>
+<h5>Opis trasy:</h5><p><strong><%= @track.description %></strong></p>
+
+<%= link_to 'Edytuj', edit_track_path, class: "btn btn-primary" %>
+<%= link_to 'Lista tras', tracks_path, class: "btn btn-secondary" %>
