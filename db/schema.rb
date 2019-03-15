@@ -10,20 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_13_183635) do
+ActiveRecord::Schema.define(version: 2019_03_15_005215) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "drivers", force: :cascade do |t|
+    t.string "name"
+    t.string "surname"
+    t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "tracks", force: :cascade do |t|
     t.string "start"
     t.string "destination"
-    t.string "driver"
     t.string "car"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "distance"
     t.string "description"
+    t.integer "driver_id"
   end
 
 end

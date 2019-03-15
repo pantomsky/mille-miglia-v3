@@ -21,7 +21,7 @@
       <td><%= track.start %></td>
       <td><%= track.destination %></td>
       <td><%= track.distance %></td>
-      <td><%= track.driver %></td>
+      <td><%= Driver.find(track.driver_id).name %> <%= Driver.find(track.driver_id).surname %></td>
       <td><%= track.car %></td>
       <td><%= track.description %></td>
       <td>

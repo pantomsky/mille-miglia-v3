@@ -1,0 +1,10 @@
+<h1 class="my-4">Profil kierowcy</h1>
+
+<h5>Nr id:</h5><p><strong><%= @driver.id %></strong></p>
+<h5>Początek trasy:</h5><p><strong><%= @driver.name %></strong></p>
+<h5>Koniec trasy:</h5><p><strong><%= @driver.surname %></strong></p>
+<h5>Długość:</h5><p><strong><%= @driver.address %></strong></p>
+
+
+<%= link_to 'Edytuj', edit_driver_path, class: "btn btn-primary" %>
+<%= link_to 'Lista kierowców', drivers_path, class: "btn btn-secondary" %>

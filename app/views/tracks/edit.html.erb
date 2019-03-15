@@ -1,37 +1,3 @@
 <h1 class="my-4"> Edytuj trasę </h1>
 
-<%= form_for @track do |form| %>
-  <p>
-    <%= form.label :star, "Początek trasy" %><br>
-    <%= form.text_field :start %>
-  </p>
-
-  <p>
-    <%= form.label :destination, "Koniec trasy" %><br>
-    <%= form.text_field :destination %>
-  </p>
-
-  <p>
-    <%= form.label :distance, "Długość" %><br>
-    <%= form.text_field :distance %>
-  </p>
-
-  <p>
-    <%= form.label :driver, "Kierowca" %><br>
-    <%= form.text_field :driver %>
-  </p>
-
-  <p>
-    <%= form.label :car, "Samochód" %><br>
-    <%= form.text_field :car %>
-  </p>
-
-  <p>
-    <%= form.label :description, "Opis" %><br>
-    <%= form.text_field :description %>
-  </p>
-
-  <p>
-    <%= form.submit "Zapisz", class: "btn btn-success" %>
-  </p>
-<% end %>
+<%= render partial: "form", locals: { button_name: "Zaspisz"} %>
