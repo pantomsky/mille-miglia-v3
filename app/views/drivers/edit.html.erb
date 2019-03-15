@@ -1,0 +1,22 @@
+<h1 class="my-4"> Edytuj kierwce </h1>
+
+<%= form_for @driver do |form| %>
+  <p>
+    <%= form.label :name, "Imie" %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :surname, "Nazwisko" %><br>
+    <%= form.text_field :surname %>
+  </p>
+
+  <p>
+    <%= form.label :address, "Adres" %><br>
+    <%= form.text_field :address %>
+  </p>
+
+  <p>
+    <%= form.submit "Zapisz", class: "btn btn-success" %>
+  </p>
+<% end %>

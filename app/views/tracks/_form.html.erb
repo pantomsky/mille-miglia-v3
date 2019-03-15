@@ -1,0 +1,33 @@
+<%= form_for @track do |form| %>
+  <p>
+    <%= form.label :star, "Początek trasy" %><br>
+    <%= form.text_field :start %>
+  </p>
+
+  <p>
+    <%= form.label :destination, "Koniec trasy" %><br>
+    <%= form.text_field :destination %>
+  </p>
+
+  <p>
+    <%= form.label :distance, "Długość" %><br>
+    <%= form.text_field :distance %>
+  </p>
+
+  <%= form.label :driver_id, "Kierowca X" %><br>
+  <%= form.select :driver_id, options_for_select(Driver.all.map {|d| ["#{d.name} #{d.surname}",d.id]}, @track.driver_id),  { include_blank: true }, class: "form-control custom-select" %>
+
+  <p>
+    <%= form.label :car, "Samochód" %><br>
+    <%= form.text_field :car %>
+  </p>
+
+  <p>
+    <%= form.label :description, "Opis" %><br>
+    <%= form.text_field :description %>
+  </p>
+
+  <p>
+    <%= form.submit button_name, class: "btn btn-success" %>
+  </p>
+<% end %>

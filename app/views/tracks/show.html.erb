@@ -4,7 +4,7 @@
 <h5>Początek trasy:</h5><p><strong><%= @track.start %></strong></p>
 <h5>Koniec trasy:</h5><p><strong><%= @track.destination %></strong></p>
 <h5>Długość:</h5><p><strong><%= @track.distance %></strong></p>
-<h5>Kierowca:</h5><p><strong><%= @track.driver %></strong></p>
+<h5>Kierowca:</h5><p><strong><%= @track.driver.name %> <%= @track.driver.surname %></strong></p>
 <h5>Samochód:</h5><p><strong><%= @track.car %></strong></p>
 <h5>Opis trasy:</h5><p><strong><%= @track.description %></strong></p>
 

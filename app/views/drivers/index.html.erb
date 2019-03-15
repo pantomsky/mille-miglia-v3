@@ -1,0 +1,26 @@
+<h1 class="my-4">Lista kierowców</h1>
+
+<p><%= link_to "Dodaj nowego kirowcę", new_driver_path, class: "btn btn-success" %></p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Imię</th>
+      <th>Nazwisko</th>
+      <th>Adres</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @drivers.each do |driver| %>
+    <tr>
+      <td><%= driver.id %></td>
+      <td><%= driver.name %></td>
+      <td><%= driver.surname %></td>
+      <td><%= driver.address %></td>
+      <td>
+        <%= link_to 'Pokaż', driver_path(driver) %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>

@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   #get 'track#new'
 
   resources :tracks
+
+  resources :drivers
+
 end

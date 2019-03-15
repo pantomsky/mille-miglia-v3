@@ -6,12 +6,13 @@ class TracksController < ApplicationController
 
   def create
     @track = Track.new(track_params)
+
     @track.save
     redirect_to tracks_path
   end
 
   def edit
-    @track = Track.find(params[:id])  
+    @track = Track.find(params[:id])
   end
 
   def update
@@ -29,12 +30,13 @@ class TracksController < ApplicationController
 
   def index
     @tracks = Track.all
+  
   end
 
   private
 
   def track_params
-    params.require(:track).permit(:start, :destination, :distance, :driver, :car, :description)
+    params.require(:track).permit(:start, :destination, :distance, :driver_id, :car, :description)
   end
 
 end
