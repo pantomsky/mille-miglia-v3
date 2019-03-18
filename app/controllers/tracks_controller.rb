@@ -30,13 +30,12 @@ class TracksController < ApplicationController
 
   def index
     @tracks = Track.all
-  
   end
 
   private
 
   def track_params
-    params.require(:track).permit(:start, :destination, :distance, :driver_id, :car, :description)
+    params.require(:track).permit(:start, :destination, :car, :distance, :description, :driver_id, :date)
   end
 
 end
