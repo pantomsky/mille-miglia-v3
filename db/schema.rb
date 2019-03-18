@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_15_005215) do
+ActiveRecord::Schema.define(version: 2019_03_16_010150) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2019_03_15_005215) do
     t.integer "distance"
     t.string "description"
     t.integer "driver_id"
+    t.date "date"
   end
 
 end
